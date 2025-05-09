@@ -1,5 +1,6 @@
 package com.grimeygrub.yonder;
 
+import com.grimeygrub.yonder.block.ModBlocks;
 import com.grimeygrub.yonder.item.ModItems;
 import org.slf4j.Logger;
 
@@ -57,6 +58,7 @@ public class Yonder
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -74,6 +76,10 @@ public class Yonder
     {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.TITANIUM_INGOT);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.MOONDUST_BLOCK);
         }
     }
 
