@@ -64,7 +64,6 @@ public class Yonder
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
-    //skibidi
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
