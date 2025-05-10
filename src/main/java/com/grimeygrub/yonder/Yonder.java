@@ -80,6 +80,9 @@ public class Yonder
 
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.MOONDUST_BLOCK);
+            event.accept(ModBlocks.LUNAR_ROCK);
+            event.accept(ModBlocks.LUNAR_GRAVEL);
+            event.accept(ModBlocks.ANORTHOSITE);
         }
     }
 

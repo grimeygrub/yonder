@@ -26,6 +26,30 @@ public class ModBlocks {
                     .mapColor(MapColor.STONE)
                     .instrument(NoteBlockInstrument.BIT)));
 
+    public static final DeferredBlock<Block>  LUNAR_ROCK = registerBlock("lunar_rock",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2F, 4.0F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.DRIPSTONE_BLOCK )
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BIT)));
+
+    public static final DeferredBlock<Block>  LUNAR_GRAVEL = registerBlock("lunar_gravel",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(1F, 0.4F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.GRAVEL )
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BIT)));
+
+    public static final DeferredBlock<Block>  ANORTHOSITE = registerBlock("anorthosite",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(4F, 12F)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE )
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BIT)));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name,block);
         registerBlockItem(name,toReturn);

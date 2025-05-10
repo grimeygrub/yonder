@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "yonder:block/lunar_rock_top",
+    "side": "yonder:block/lunar_rock_side"
+  }
+}
